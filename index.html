@@ -20,7 +20,7 @@
  </nav>
   
 <hr style="border: 1px solid #dee2e6; margin: 20px 0;">
- <h2>About Me</h2>
+ <h2 id="about">About Me</h2>
  <p>I am <strong>elyas</strong>, a third-year <em>Software Engineering</em> student at <em>Addis Ababa Science and Technology University</em>. I build websites, solve problems with code, and work on personal projects including <a href="files/cv.pdf">my portfolio CV</a>.</p>
  <p>My favorite <sup>superscript</sup> and <sub>subscript</sub> characters.</p>
  <p>My favorite <abbr title="Computer Science">CS</abbr> journey began in 2023.</p>
@@ -30,7 +30,7 @@
  <p>My motivation comes from building tools that help people bring their ideas to life.</p>
 
 <hr style="border: 1px solid #dee2e6; margin: 20px 0;">
- <h2>Skills</h2>
+ <h2 id="skills">Skills</h2>
  <ul>
   <li>Programming Languages
    <ul>
@@ -72,19 +72,15 @@
  <p>My skills list will go here (Lab 6).</p>
 
 <hr style="border: 1px solid #dee2e6; margin: 20px 0;">
- <h2>Projects</h2>
- <h3>AI Business Content Generator</h3>
- <p>A Python-based AI tool that generates marketing content, blog posts, and social media copy automatically.</p>
- <p><a href="#" style="color: inherit; text-decoration: none;">GitHub Repository</a></p>
- <h3>Task Manager API</h3>
- <p>A Node.js/Express REST API for task management with Prisma ORM and PostgreSQL database integration.</p>
- <p><a href="#" style="color: inherit; text-decoration: none;">GitHub Repository</a></p>
- <h3>Hotel Manager API</h3>
- <p>A Flask-based API for managing hotel reservations, rooms, and guest services with authentication.</p>
- <p><a href="#" style="color: inherit; text-decoration: none;">GitHub Repository</a></p>
- <h3>Skill Swap Board API</h3>
- <p>A Django REST API platform for skill exchange matching between users with project tracking.</p>
- <p><a href="#" style="color: inherit; text-decoration: none;">GitHub Repository</a></p>
+ <h2 id="projects">Projects</h2>
+ <h3>AI Business Content Generator <em>(in progress)</em></h3>
+ <p>A full-stack AI tool that generates marketing content, blog posts, and social media copy automatically using the OpenAI API.</p>
+ <h3>Task Manager API <em>(completed)</em></h3>
+ <p>A secure Node.js/Express REST API for task management with PostgreSQL, input validation, and an automated test suite.</p>
+ <h3>Hotel Manager (Casa Lume PMS) <em>(in progress)</em></h3>
+ <p>A hotel property management system foundation for guests, rooms, and reservations, built with a React client and an Express/Prisma backend.</p>
+ <h3>SkillSwap Board API <em>(completed)</em></h3>
+ <p>A Node.js/Express REST API for a public skill-offer/request board, with filtering, pagination, and a normalised PostgreSQL schema.</p>
  <table style="border-collapse: collapse; width: 100%; margin: 20px 0; border: 1px solid #dee2e6;">
   <caption>Projects Summary</caption>
   <thead>
@@ -98,7 +94,7 @@
    <tr>
     <td style="border: 1px solid #dee2e6; padding: 8px; text-align: left;">AI Business Content Generator</td>
     <td style="border: 1px solid #dee2e6; padding: 8px; text-align: left;">AI tool that generates marketing content, blog posts, and social media copy automatically</td>
-    <td style="border: 1px solid #dee2e6; padding: 8px; text-align: left;">Python, OpenAI API</td>
+    <td style="border: 1px solid #dee2e6; padding: 8px; text-align: left;">React, Express, Prisma, PostgreSQL, OpenAI API</td>
    </tr>
    <tr>
     <td style="border: 1px solid #dee2e6; padding: 8px; text-align: left;">Task Manager API</td>
@@ -106,34 +102,35 @@
     <td style="border: 1px solid #dee2e6; padding: 8px; text-align: left;">Node.js, Express, Prisma, PostgreSQL</td>
    </tr>
    <tr>
-    <td style="border: 1px solid #dee2e6; padding: 8px; text-align: left;">Hotel Manager API</td>
-    <td style="border: 1px solid #dee2e6; padding: 8px; text-align: left;">Flask-based API for managing hotel reservations, rooms, and guest services with authentication</td>
-    <td style="border: 1px solid #dee2e6; padding: 8px; text-align: left;">Flask, SQLAlchemy, JWT Auth</td>
+    <td style="border: 1px solid #dee2e6; padding: 8px; text-align: left;">Hotel Manager (Casa Lume PMS)</td>
+    <td style="border: 1px solid #dee2e6; padding: 8px; text-align: left;">Hotel property management system for guests, rooms, and reservations</td>
+    <td style="border: 1px solid #dee2e6; padding: 8px; text-align: left;">React, Express, Prisma, PostgreSQL</td>
    </tr>
    <tr>
-    <td style="border: 1px solid #dee2e6; padding: 8px; text-align: left;">Skill Swap Board API</td>
-    <td style="border: 1px solid #dee2e6; padding: 8px; text-align: left;">Django REST API platform for skill exchange matching between users with project tracking</td>
-    <td style="border: 1px solid #dee2e6; padding: 8px; text-align: left;">Django, Django REST Framework</td>
+    <td style="border: 1px solid #dee2e6; padding: 8px; text-align: left;">SkillSwap Board API</td>
+    <td style="border: 1px solid #dee2e6; padding: 8px; text-align: left;">Skill-offer/request board with filtering, pagination, and a normalised schema</td>
+    <td style="border: 1px solid #dee2e6; padding: 8px; text-align: left;">Node.js, Express, Prisma, PostgreSQL</td>
    </tr>
   </tbody>
   <tfoot>
    <tr>
-    <td colspan="3" style="border: 1px solid #dee2e6; padding: 8px; text-align: left;">Total Projects: 4</td>
+    <td colspan="3" style="border: 1px solid #dee2e6; padding: 8px; text-align: left;">Featured projects: 4 (see the full projects page for all 16)</td>
    </tr>
-  </tfoot>
-   </table>
-  <hr style="border: 1px solid #dee2e6; margin: 20px 0;">
-  
-  <h2>Education</h2>
+</tfoot>
+    </table>
+   
+   <p><a href="projects.html">all my project</a></p>
+   
+   <hr style="border: 1px solid #dee2e6; margin: 20px 0;">
+   
+   <h2 id="education">Education</h2>
   <h3>BSc in Software Engineering</h3>
   
  <p>Addis Ababa Science and Technology University, 2023 – present</p>
  <p><em>Focused on Software Engineering principles, full-stack development, and practical project experience.</em></p>
  
- <hr style="border: 1px solid #dee2e6; margin: 20px 0;">
- 
  <h2>Academic Record</h2>
- <table>
+ <table border="1" cellpadding="6" cellspacing="0">
   <caption>Academic Record</caption>
   <thead>
    <tr>
@@ -184,7 +181,7 @@
 
 <hr style="border: 1px solid #dee2e6; margin: 20px 0;">
 
-<h2>Contact</h2>
+<h2 id="contact">Contact</h2>
  <p>Email: <a href="mailto:elyasdemamu644@gmail.com">elyasdemamu644@gmail.com</a><br>
   Phone: <a href="tel:+251934928360">+251934928360</a></p>
  <p>Address: <br> Addis Ababa, <br> Ethiopia</p>
