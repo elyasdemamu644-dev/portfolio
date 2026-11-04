@@ -20,6 +20,12 @@
    <a href="#contact">Contact</a> |
    <a href="projects.html">All Projects</a>
   </nav>
+  <dialog id="hireDialog">
+   <h2>Available for internships</h2>
+   <p>I am available for internships and freelance web projects from June 2027.</p>
+   <p><a href="#contact">Send me a message</a> or <a href="files/cv.pdf" download>download my CV</a>.</p>
+   <button type="button" onclick="document.getElementById('hireDialog').close()">Close</button>
+  </dialog>
  </header>
  <main>
   <section id="about">
@@ -27,6 +33,11 @@
    <p>I am <strong>Elyas Demamu</strong>, a third-year <em>Software Engineering</em> student at <em>Addis Ababa Science and Technology University</em>. I build websites, solve problems with code, and work on personal projects including <a href="files/cv.pdf">my portfolio CV</a>.</p>
    <p>My favorite <sup>superscript</sup> and <sub>subscript</sub> characters.</p>
    <p>My favorite <abbr title="Computer Science">CS</abbr> journey began in 2023.</p>
+   <h3>Hear my introduction</h3>
+   <audio controls>
+    <source src="media/intro.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+   </audio>
   </section>
   <section id="skills">
    <h2>Skills</h2>
@@ -69,6 +80,20 @@
    <dt>JavaScript</dt>
    <dd>Makes things interactive</dd>
   </dl>
+  <h3>Skill Levels</h3>
+  <p>
+   <label for="lvl-html">HTML</label>
+   <meter id="lvl-html" value="0.8" min="0" max="1">80%</meter>
+  </p>
+  <p>
+   <label for="lvl-python">Python</label>
+   <meter id="lvl-python" value="0.7" min="0" max="1">70%</meter>
+  </p>
+  <p>
+   <label for="lvl-js">JavaScript</label>
+   <meter id="lvl-js" value="0.2" min="0" max="1" low="0.3" high="0.7"
+    optimum="1">20%</meter>
+  </p>
  </section>
   <section id="projects">
    <h2>Projects</h2>
@@ -89,6 +114,52 @@
     <p>A Node.js/Express REST API for a public skill-offer/request board, with filtering, pagination, and a normalised PostgreSQL schema.</p>
    </article>
   </section>
+  <section id="education">
+   <h2>Education</h2>
+   <h3>BSc in Software Engineering</h3>
+   <p>Addis Ababa Science and Technology University, September 2023 – present</p>
+   <p>Focused on Software Engineering principles, full-stack development, and practical project experience.</p>
+   <table border="1" cellpadding="6" cellspacing="0">
+    <caption>Academic Record</caption>
+    <thead>
+     <tr>
+      <th>Course</th>
+      <th>Grade</th>
+      <th>Year</th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>Database Systems</td>
+      <td>A</td>
+      <td>2026</td>
+     </tr>
+     <tr>
+      <td>Computer Networks</td>
+      <td>B+</td>
+     </tr>
+     <tr>
+      <td>Data Structures</td>
+     <td>A-</td>
+     <td>2026</td>
+    </tr>
+     <tr>
+      <td>Web Development</td>
+     <td>B</td>
+     <td>2026</td>
+    </tr>
+     <tr>
+      <td>Software Engineering</td>
+     <td>A</td>
+     <td>2026</td>
+    </tr>
+     <tr>
+      <td>Mathematics</td>
+     <td>B-</td>
+     <td>2026</td>
+    </tr>
+   </table>
+  </section>
   <section id="contact">
    <h2>Contact</h2>
    <p>Email: <a href="mailto:elyasdemamu644@gmail.com">elyasdemamu644@gmail.com</a><br>
@@ -101,6 +172,12 @@
     <a href="https://www.linkedin.com/in/elyas-demamu-0974b538a/" class="connect-btn btn-linkedin" target="_blank">LinkedIn</a>
     <a href="mailto:elyasdemamu644@gmail.com" class="connect-btn btn-email">Email</a>
    </div>
+
+   <h3>Where I study</h3>
+   <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3936.156876003476!2d38.742584!3d9.037230!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2set!4v=1730967876399!5m1!1e44"
+    width="600" height="300"
+    title="Map of Addis Ababa Science and Technology University campus">
+   </iframe>
 
    <h3>Send me a message</h3>
    <form action="thank-you.html" method="post" enctype="multipart/form-data">
@@ -172,6 +249,7 @@
  </main>
  <footer>
   <p>&copy; 2026 Elyas Demamu. All rights reserved.</p>
+  <p>Last updated: <time datetime="2026-11-05">5 November 2026</time></p>
  </footer>
 </body>
 </html>
