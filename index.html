@@ -89,57 +89,10 @@
     <p>A Node.js/Express REST API for a public skill-offer/request board, with filtering, pagination, and a normalised PostgreSQL schema.</p>
    </article>
   </section>
-  <section id="education">
-   <h2>Education</h2>
-   <h3>BSc in Software Engineering</h3>
-   <p>Addis Ababa Science and Technology University, September 2023 – present</p>
-   <p>Focused on Software Engineering principles, full-stack development, and practical project experience.</p>
-   <table border="1" cellpadding="6" cellspacing="0">
-    <caption>Academic Record</caption>
-    <thead>
-     <tr>
-      <th>Course</th>
-      <th>Grade</th>
-      <th>Year</th>
-     </tr>
-    </thead>
-    <tbody>
-     <tr>
-      <td>Database Systems</td>
-      <td>A</td>
-      <td>2026</td>
-     </tr>
-     <tr>
-      <td>Computer Networks</td>
-      <td>B+</td>
-      <td>2026</td>
-     </tr>
-     <tr>
-      <td>Data Structures</td>
-     <td>A-</td>
-     <td>2026</td>
-    </tr>
-     <tr>
-      <td>Web Development</td>
-      <td>B</td>
-      <td>2026</td>
-    </tr>
-     <tr>
-      <td>Software Engineering</td>
-     <td>A</td>
-     <td>2026</td>
-    </tr>
-     <tr>
-      <td>Mathematics</td>
-     <td>B-</td>
-     <td>2026</td>
-    </tr>
-   </table>
-  </section>
   <section id="contact">
    <h2>Contact</h2>
    <p>Email: <a href="mailto:elyasdemamu644@gmail.com">elyasdemamu644@gmail.com</a><br>
-    Phone: <a href="tel:+251934928360">+251934928360</a></p>
+    Phone: +251934928360</p>
    <p>Address: Addis Ababa, Ethiopia</p>
    <p><a href="files/cv.pdf">Download CV</a></p>
    <p>Connect with me</p>
@@ -150,14 +103,42 @@
    </div>
 
    <h3>Send me a message</h3>
-   <form action="thank-you.html" method="get">
+   <form action="thank-you.html" method="post" enctype="multipart/form-data">
     <fieldset>
      <legend>Your Details</legend>
      <label for="fullname">Full name:</label>
-     <input type="text" id="fullname" name="fullname">
+     <input type="text" id="fullname" name="fullname" required>
      <br><br>
      <label for="email">Email:</label>
-     <input type="email" id="email" name="email">
+     <input type="email" id="email" name="email" required>
+    </fieldset>
+
+    <fieldset>
+     <legend>Project Details</legend>
+     <label for="phone">Phone (optional):</label>
+     <input type="text" id="phone" name="phone"
+      pattern="0[79][0-9]{8}" title="10 digits starting with 09 or 07">
+     <br><br>
+     <p>Preferred contact method:</p>
+     <input type="radio" id="by-email" name="contact-method" value="email" checked>
+     <label for="by-email">Email</label>
+     <input type="radio" id="by-phone" name="contact-method" value="phone">
+     <label for="by-phone">Phone</label>
+     <br><br>
+     <label for="meeting">Preferred meeting date:</label>
+     <input type="date" id="meeting" name="meeting" min="2026-11-01">
+     <br><br>
+     <label for="weeks">Project length (weeks):</label>
+     <input type="number" id="weeks" name="weeks" min="1" max="52" step="1">
+     <br><br>
+     <label for="brief">Attach a project brief:</label>
+     <input type="file" id="brief" name="brief">
+     <br><br>
+     <label for="colour">Preferred website colour:</label>
+     <input type="color" id="colour" name="colour" value="#1f5fa8">
+     <br><br>
+     <label for="rating">How much do you like my portfolio? (1–10)</label>
+     <input type="range" id="rating" name="rating" min="1" max="10" value="7">
     </fieldset>
 
     <fieldset>
@@ -177,8 +158,12 @@
      </select>
      <br><br>
      <label for="message">Message:</label><br>
-     <textarea id="message" name="message" rows="6" cols="40"></textarea>
+     <textarea id="message" name="message" rows="6" cols="40" required></textarea>
     </fieldset>
+
+    <br>
+    <input type="checkbox" id="copy" name="copy" value="yes">
+    <label for="copy">Send me a copy of this message</label>
 
     <button type="submit">Send Message</button>
     <button type="reset">Clear</button>
