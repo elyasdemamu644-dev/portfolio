@@ -20,12 +20,6 @@
    <a href="#contact">Contact</a> |
    <a href="projects.html">All Projects</a>
   </nav>
-  <dialog id="hireDialog">
-   <h2>Available for internships</h2>
-   <p>I am available for internships and freelance web projects from June 2027.</p>
-   <p><a href="#contact">Send me a message</a> or <a href="files/cv.pdf" download>download my CV</a>.</p>
-   <button type="button" onclick="document.getElementById('hireDialog').close()">Close</button>
-  </dialog>
  </header>
  <main>
   <section id="about">
@@ -33,6 +27,8 @@
    <p>I am <strong>Elyas Demamu</strong>, a third-year <em>Software Engineering</em> student at <em>Addis Ababa Science and Technology University</em>. I build websites, solve problems with code, and work on personal projects including <a href="files/cv.pdf">my portfolio CV</a>.</p>
    <p>My favorite <sup>superscript</sup> and <sub>subscript</sub> characters.</p>
    <p>My favorite <abbr title="Computer Science">CS</abbr> journey began in 2023.</p>
+   <p><abbr title="HyperText Markup Language">HTML</abbr> is the standard markup language for creating web pages.</p>
+   <p>My favourite tag is <main>, because it tells the browser where the important content is & helps screen readers.</p>
    <h3>Hear my introduction</h3>
    <audio controls>
     <source src="media/intro.mp3" type="audio/mpeg">
@@ -80,20 +76,6 @@
    <dt>JavaScript</dt>
    <dd>Makes things interactive</dd>
   </dl>
-  <h3>Skill Levels</h3>
-  <p>
-   <label for="lvl-html">HTML</label>
-   <meter id="lvl-html" value="0.8" min="0" max="1">80%</meter>
-  </p>
-  <p>
-   <label for="lvl-python">Python</label>
-   <meter id="lvl-python" value="0.7" min="0" max="1">70%</meter>
-  </p>
-  <p>
-   <label for="lvl-js">JavaScript</label>
-   <meter id="lvl-js" value="0.2" min="0" max="1" low="0.3" high="0.7"
-    optimum="1">20%</meter>
-  </p>
  </section>
   <section id="projects">
    <h2>Projects</h2>
@@ -117,7 +99,7 @@
   <section id="education">
    <h2>Education</h2>
    <h3>BSc in Software Engineering</h3>
-   <p>Addis Ababa Science and Technology University, September 2023 – present</p>
+   <p>Addis Ababa Science and Technology <abbr title="Addis Ababa Science and Technology University">AASTU</abbr> University, <time datetime="2023-09">September 2023</time> – present</p>
    <p>Focused on Software Engineering principles, full-stack development, and practical project experience.</p>
    <table border="1" cellpadding="6" cellspacing="0">
     <caption>Academic Record</caption>
@@ -163,7 +145,7 @@
   <section id="contact">
    <h2>Contact</h2>
    <p>Email: <a href="mailto:elyasdemamu644@gmail.com">elyasdemamu644@gmail.com</a><br>
-    Phone: +251934928360</p>
+    Phone: +251&nbsp;934&nbsp;928&nbsp;360</p>
    <p>Address: Addis Ababa, Ethiopia</p>
    <p><a href="files/cv.pdf">Download CV</a></p>
    <p>Connect with me</p>
@@ -178,73 +160,6 @@
     width="600" height="300"
     title="Map of Addis Ababa Science and Technology University campus">
    </iframe>
-
-   <h3>Send me a message</h3>
-   <form action="thank-you.html" method="post" enctype="multipart/form-data">
-    <fieldset>
-     <legend>Your Details</legend>
-     <label for="fullname">Full name:</label>
-     <input type="text" id="fullname" name="fullname" required>
-     <br><br>
-     <label for="email">Email:</label>
-     <input type="email" id="email" name="email" required>
-    </fieldset>
-
-    <fieldset>
-     <legend>Project Details</legend>
-     <label for="phone">Phone (optional):</label>
-     <input type="text" id="phone" name="phone"
-      pattern="0[79][0-9]{8}" title="10 digits starting with 09 or 07">
-     <br><br>
-     <p>Preferred contact method:</p>
-     <input type="radio" id="by-email" name="contact-method" value="email" checked>
-     <label for="by-email">Email</label>
-     <input type="radio" id="by-phone" name="contact-method" value="phone">
-     <label for="by-phone">Phone</label>
-     <br><br>
-     <label for="meeting">Preferred meeting date:</label>
-     <input type="date" id="meeting" name="meeting" min="2026-11-01">
-     <br><br>
-     <label for="weeks">Project length (weeks):</label>
-     <input type="number" id="weeks" name="weeks" min="1" max="52" step="1">
-     <br><br>
-     <label for="brief">Attach a project brief:</label>
-     <input type="file" id="brief" name="brief">
-     <br><br>
-     <label for="colour">Preferred website colour:</label>
-     <input type="color" id="colour" name="colour" value="#1f5fa8">
-     <br><br>
-     <label for="rating">How much do you like my portfolio? (1–10)</label>
-     <input type="range" id="rating" name="rating" min="1" max="10" value="7">
-    </fieldset>
-
-    <fieldset>
-     <legend>Your Message</legend>
-     <label for="reason">Reason for contacting me:</label>
-     <select id="reason" name="reason">
-      <optgroup label="Work">
-       <option value="internship">Internship offer</option>
-       <option value="freelance">Freelance project</option>
-       <option value="job">Full-time job</option>
-      </optgroup>
-      <optgroup label="Study">
-       <option value="group-project">Group project</option>
-       <option value="tutoring">Tutoring</option>
-      </optgroup>
-      <option value="other">Other</option>
-     </select>
-     <br><br>
-     <label for="message">Message:</label><br>
-     <textarea id="message" name="message" rows="6" cols="40" required></textarea>
-    </fieldset>
-
-    <br>
-    <input type="checkbox" id="copy" name="copy" value="yes">
-    <label for="copy">Send me a copy of this message</label>
-
-    <button type="submit">Send Message</button>
-    <button type="reset">Clear</button>
-   </form>
   </section>
  </main>
  <footer>
