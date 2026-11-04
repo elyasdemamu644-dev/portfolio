@@ -11,6 +11,7 @@
 </head>
 <body>
  <header>
+  <canvas id="logo" width="120" height="120">Abebe Kebede logo</canvas>
   <h1>Elyas Demamu</h1>
   <nav>
    <a href="#about">About</a> |
@@ -20,6 +21,12 @@
    <a href="#contact">Contact</a> |
    <a href="projects.html">All Projects</a>
   </nav>
+  <dialog id="hireDialog">
+   <h2>Available for internships</h2>
+   <p>I am available for internships and freelance web projects from June 2027.</p>
+   <p><a href="#contact">Send me a message</a> or <a href="files/cv.pdf" download>download my CV</a>.</p>
+   <button type="button" onclick="document.getElementById('hireDialog').close()">Close</button>
+  </dialog>
  </header>
  <main>
   <section id="about">
@@ -76,6 +83,52 @@
    <dt>JavaScript</dt>
    <dd>Makes things interactive</dd>
   </dl>
+  <h3>Skill Levels</h3>
+  <p>
+   <label for="lvl-html">HTML</label>
+   <meter id="lvl-html" value="0.8" min="0" max="1">80%</meter>
+  </p>
+  <p>
+   <label for="lvl-python">Python</label>
+   <meter id="lvl-python" value="0.7" min="0" max="1">70%</meter>
+  </p>
+  <p>
+   <label for="lvl-js">JavaScript</label>
+   <meter id="lvl-js" value="0.2" min="0" max="1" low="0.3" high="0.7"
+    optimum="1">20%</meter>
+  </p>
+ <canvas width='300' height='150'>Skills bar chart</canvas>
+
+<script>
+const chart = document.querySelector('canvas[width="300"][height="150"]');
+const chartCtx = chart.getContext('2d');
+
+// Skill levels (matching the meter values)
+const skills = [
+  { name: 'HTML', value: 0.8, color: '#1f5fa8' },
+  { name: 'Python', value: 0.7, color: '#1f5fa8' },
+  { name: 'JavaScript', value: 0.2, color: '#1f5fa8' }
+];
+
+const maxHeight = 120;
+const barWidth = 80;
+const gap = 20;
+
+skills.forEach((skill, index) => {
+  const barHeight = skill.value * maxHeight;
+  const x = index * (barWidth + gap) + gap;
+  const y = 150 - barHeight;
+
+  chartCtx.fillStyle = skill.color;
+  chartCtx.fillRect(x, y, barWidth, barHeight);
+
+  chartCtx.fillStyle = 'black';
+  chartCtx.font = '14px Arial';
+  chartCtx.textAlign = 'center';
+  chartCtx.fillText(skill.name, x + barWidth / 2, 145);
+});
+</script>
+
  </section>
   <section id="projects">
    <h2>Projects</h2>
@@ -99,7 +152,7 @@
   <section id="education">
    <h2>Education</h2>
    <h3>BSc in Software Engineering</h3>
-   <p>Addis Ababa Science and Technology <abbr title="Addis Ababa Science and Technology University">AASTU</abbr> University, <time datetime="2023-09">September 2023</time> – present</p>
+   <p>Addis Ababa Science and Technology University, September 2023 – present</p>
    <p>Focused on Software Engineering principles, full-stack development, and practical project experience.</p>
    <table border="1" cellpadding="6" cellspacing="0">
     <caption>Academic Record</caption>
@@ -145,7 +198,7 @@
   <section id="contact">
    <h2>Contact</h2>
    <p>Email: <a href="mailto:elyasdemamu644@gmail.com">elyasdemamu644@gmail.com</a><br>
-    Phone: +251&nbsp;934&nbsp;928&nbsp;360</p>
+    Phone: +251934928360</p>
    <p>Address: Addis Ababa, Ethiopia</p>
    <p><a href="files/cv.pdf">Download CV</a></p>
    <p>Connect with me</p>
