@@ -11,6 +11,27 @@
 </head>
 <body>
 <header>
+  <canvas id="logo" width="100" height="100" style="background: #1f5fa8; color: white; display: block; margin: 0 auto;;">
+   <noscript>Elyas Demamu</noscript>
+  </canvas>
+   <script>
+    const logoCanvas = document.getElementById('logo');
+    if (logoCanvas && logoCanvas.getContext('2d')) {
+     ctx = logoCanvas.getContext('2d');
+     ctx.fillRect(0, 0, logoCanvas.width, logoCanvas.height);
+     ctx.beginPath();
+     const radius = Math.min(logoCanvas.width, logoCanvas.height) / 2;
+     const centerX = logoCanvas.width / 2;
+     const centerY = logoCanvas.height / 2;
+     ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI);
+     ctx.fill();
+     ctx.fillStyle = 'white';
+     ctx.textAlign = 'center';
+     ctx.textBaseline = 'middle';
+     ctx.font = 'bold 36px Arial';
+     ctx.fillText('ED', centerX, centerY);
+    }
+   </script>
   <h1>Elyas Demamu</h1>
   <img src="images/profile.jpg" alt="Elyas Demamu profile photo" width="200">
   <nav>
@@ -27,12 +48,12 @@
 
 <button id="hire-btn" style="margin: 20px 0; padding: 15px 25px; background: #000000; color: white; border: none; border-radius: 6; font-weight: bold;">Hire Me</button>
 
-<main>
-  <section id="about">
-   <h2>About Me</h2>
-   <p>I am <strong>Elyas Demamu</strong>, a third-year <em>Software Engineering</em> student at <em><abbr title="Addis Ababa Science and Technology University">AASTU</abbr></em>. I build websites, solve problems with code, and work on personal projects including <a href="files/cv.pdf">my portfolio <abbr title="Curriculum Vitae">CV</abbr></a>. <time datetime="2023">I began my Software Engineering journey in 2023</time>.</p>
-   <p>My favorite <sup>superscript</sup> and <sub>subscript</sub> characters.</p>
-   <p>My favorite <abbr title="Computer Science">CS</abbr> journey began in 2023.</p>
+ <main>
+   <section id="about">
+    <h2>About Me</h2>
+    <p>I am <strong>Elyas Demamu</strong>, a third-year <em>Software Engineering</em> student at <em><abbr title="Addis Ababa Science and Technology University">AASTU</abbr></em>. I build websites, solve problems with code, and work on personal projects including <a href="files/cv.pdf">my portfolio <abbr title="Curriculum Vitae">CV</abbr></a>. <time datetime="2023">I began my Software Engineering journey in 2023</time>.</p>
+    <p>My favorite <sup>superscript</sup> and <sub>subscript</sub> characters.</p>
+    <p>My favorite <abbr title="Computer Science">CS</abbr> journey began in 2023.</p>
     <!-- Hear my introduction audio player -->
     <p>
      <strong>Hear my introduction:</strong>
@@ -43,25 +64,29 @@
     </p>
     <p><em>Note: Audio narration is a synthesized demonstration based on the About Me introduction. The original <code>media/intro.wav</code> greeting is preserved as a backup.</em></p>
     <aside>
-     <h2>What Inspires Me</h2>
-     <p>I am inspired by solving complex problems with code and creating meaningful digital experiences.</p>
-     <p>My motivation comes from building tools that help people bring their ideas to life.</p>
-    </aside>
-   </section>
+     <h2>What inspires me</h2>
+     <p>
+       I am inspired by solving complex problems with code and creating meaningful digital experiences.
+       <br>
+       My motivation comes from building tools that help people bring their ideas to life.
+     </p>
+</aside>
+</section>
 
-   <section>
-    <h2>A Talk I Recommend</h2>
-    <p>Recommended video: <strong>What Do Software Engineers ACTUALLY Do (And Is It Still a Good Career)?</strong> — Developete</p>
-    <iframe width="560" height="315"
-     src="https://www.youtube.com/embed/OyeHn79DsPc"
-     title="What Do Software Engineers ACTUALLY Do - Developete talk"
-     type="text/html"
-     allowfullscreen>
-    </iframe>
-   </section>
+<section>
+   <h2>A Talk I Recommend</h2>
+   <p>Recommended video: <strong>What Do Software Engineers ACTUALLY Do (And Is It Still a Good Career)?</strong> — Developete</p>
+   <iframe width="560" height="315"
+    src="https://www.youtube.com/embed/OyeHn79DsPc"
+    title="What Do Software Engineers ACTUALLY Do - Developete talk"
+    type="text/html"
+    allowfullscreen>
+   </iframe>
+</section>
 
-   <section id="skills">
+<section id="skills">
     <h2>Skills</h2>
+
     <p><strong>Core Skill Levels:</strong></p>
     <p><span style="display:inline-block;width:120px;">HTML</span> <meter value="0.9" min="0" max="1">90%</meter></p>
     <p><span style="display:inline-block;width:120px;">CSS</span> <meter value="0.85" min="0" max="1">85%</meter></p>
@@ -72,180 +97,418 @@
     <p><span style="display:inline-block;width:120px;">PostgreSQL</span> <meter value="0.65" min="0" max="1">65%</meter></p>
     <p><span style="display:inline-block;width:120px;">TypeScript</span> <meter value="0.6" min="0" max="1">60%</meter></p>
     <p><em>Note: Meter values are illustrative estimates of proficiency level.</em></p>
+
+    <h3>Technical Skills</h3>
+
+    <h4>Programming Languages</h4>
     <ul>
-    <li>Programming Languages
-     <ul>
-      <li>Python</li>
-      <li>Java</li>
-      <li>JavaScript</li>
-     </ul>
-    </li>
-    <li>Web Technologies
-     <ul>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>React</li>
-     </ul>
-    </li>
-    <li>Databases
-     <ul>
-      <li>PostgreSQL</li>
-      <li>MongoDB</li>
-     </ul>
-    </li>
+    <li>Python</li>
+    <li>Java</li>
+    <li>C++</li>
+    <li>JavaScript</li>
+    <li>TypeScript</li>
+    <li>SQL</li>
    </ul>
-   <ol start="1">
-    <li>Introduction to Software Engineering</li>
+
+   <h4>Frontend Development</h4>
+   <ul>
+    <li>HTML5</li>
+    <li>CSS3</li>
+    <li>React.js</li>
+    <li>Vite</li>
+    <li>Responsive Web Design</li>
+    <li>Semantic HTML</li>
+    <li>Form Design and Validation</li>
+    <li>DOM Manipulation</li>
+    <li>Interactive Web Interfaces</li>
+    <li>CSS Animations</li>
+   </ul>
+
+   <h4>Backend Development</h4>
+   <ul>
+    <li>Node.js</li>
+    <li>Express.js</li>
+    <li>FastAPI</li>
+    <li>Flask</li>
+    <li>Django</li>
+    <li>Django REST Framework</li>
+    <li>RESTful API Development</li>
+    <li>API Integration</li>
+    <li>Backend Architecture</li>
+    <li>Server-Side Development</li>
+   </ul>
+
+   <h4>Databases & Data Management</h4>
+   <ul>
+    <li>PostgreSQL</li>
+    <li>MongoDB</li>
+    <li>SQLite</li>
+    <li>Prisma ORM</li>
+    <li>SQLAlchemy</li>
+    <li>Database Design</li>
+    <li>Database Modeling</li>
+    <li>Database Management</li>
+    <li>Database Migrations</li>
+    <li>Relational Database Concepts</li>
+   </ul>
+
+   <h4>AI & API Integration</h4>
+   <ul>
+    <li>OpenAI API Integration</li>
+    <li>AI-Powered Application Development</li>
+    <li>AI Model and Provider Integration</li>
+    <li>LLM Application Development</li>
+    <li>AI Agent Workflows</li>
+    <li>Prompt Engineering</li>
+    <li>AI-Assisted Development</li>
+   </ul>
+
+   <h4>Software Engineering & Computer Science</h4>
+   <ul>
     <li>Data Structures and Algorithms</li>
-    <li>Version Control with Git</li>
-    <li>Web Development Fundamentals</li>
+    <li>Object-Oriented Programming (OOP)</li>
+    <li>Algorithm Design</li>
+    <li>Problem Solving</li>
+    <li>Sorting and Searching Algorithms</li>
+    <li>Database Systems</li>
+    <li>Software Design</li>
+    <li>Software Architecture</li>
+    <li>API Design</li>
+    <li>Authentication and Authorization</li>
+    <li>JWT Authentication</li>
+    <li>Data Modeling</li>
+    <li>Consistent Hashing</li>
+    <li>Load Balancing</li>
+    <li>Distributed System Concepts</li>
+   </ul>
+
+   <h4>Testing & Quality Assurance</h4>
+   <ul>
+    <li>Python Testing with pytest</li>
+    <li>Playwright</li>
+    <li>API Testing</li>
+    <li>Automated Testing</li>
+    <li>Integration Testing</li>
+    <li>End-to-End Testing</li>
+    <li>Browser Testing</li>
+    <li>Debugging</li>
+    <li>Code Review</li>
+    <li>OpenAPI Documentation</li>
+   </ul>
+
+   <h4>Development Tools & Platforms</h4>
+   <ul>
+    <li>Git</li>
+    <li>GitHub</li>
+    <li>Visual Studio Code</li>
+    <li>Postman</li>
+    <li>PowerShell</li>
+    <li>Node.js Package Manager (npm)</li>
+    <li>pnpm</li>
+    <li>Turborepo</li>
+    <li>Render</li>
+    <li>Vercel</li>
+    <li>Neon PostgreSQL</li>
+   </ul>
+
+   <h4>Web Technologies</h4>
+   <ul>
+    <li>HTML5 Canvas</li>
+    <li>HTML5 Audio and Video</li>
+    <li>HTML Forms</li>
+    <li>HTML5 Validation</li>
+    <li>JavaScript DOM APIs</li>
+    <li>Iframes and Embedded Content</li>
+    <li>Interactive Web Components</li>
+    <li>Responsive Layouts</li>
+   </ul>
+
+   <h4>Professional & Technical Competencies</h4>
+   <ul>
+    <li>Analytical Thinking</li>
+    <li>Technical Research</li>
+    <li>Problem Solving</li>
+    <li>Software Development</li>
+    <li>Debugging and Troubleshooting</li>
+    <li>Project Development</li>
+    <li>System Design Fundamentals</li>
+    <li>Independent Learning</li>
+    <li>Technical Documentation</li>
+    <li>Team Collaboration</li>
+   </ul>
+
+   <h3>My learning roadmap</h3>
+   <p>2023 � PRESENT � SOFTWARE ENGINEERING JOURNEY</p>
+
+   <h4>1. 2023 � Programming Fundamentals</h4>
+   <ul>
+    <li>Programming fundamentals</li>
+    <li>Python and Java</li>
+    <li>Problem-solving and logical thinking</li>
+    <li>Introduction to Software Engineering</li>
+   </ul>
+
+   <h4>2. 2024 � Computer Science Foundations</h4>
+   <ul>
+    <li>Data Structures and Algorithms</li>
+    <li>Object-Oriented Programming</li>
     <li>Database Management Systems</li>
+    <li>SQL and database concepts</li>
     <li>Software Development Methodologies</li>
-   </ol>
-   <dl>
-    <dt>HTML</dt>
-    <dd>Marks up content</dd>
-    <dt>CSS</dt>
-    <dd>Styles the presentation</dd>
-    <dt>JavaScript</dt>
-    <dd>Makes things interactive</dd>
-   </dl>
+   </ul>
+
+   <h4>3. 2025 � Web Development</h4>
+   <ul>
+    <li>HTML5 and CSS3</li>
+    <li>JavaScript</li>
+    <li>React</li>
+    <li>Node.js and Express.js</li>
+    <li>REST API development</li>
+    <li>PostgreSQL and MongoDB</li>
+    <li>Git and GitHub</li>
+   </ul>
+
+   <h4>4. 2026 � Advanced Development and AI</h4>
+   <ul>
+    <li>TypeScript and full-stack development</li>
+    <li>Prisma ORM and database architecture</li>
+    <li>Authentication and authorization</li>
+    <li>API testing and automated testing</li>
+    <li>AI-powered applications and OpenAI API integration</li>
+    <li>AI agents and development automation</li>
+    <li>System design, load balancing and distributed systems</li>
+   </ul>
+
+   <h4>5. Ongoing � Continuous Learning</h4>
+   <ul>
+    <li>Advanced software architecture</li>
+    <li>Scalable backend systems</li>
+    <li>AI engineering and agentic workflows</li>
+    <li>Better testing, security and application reliability</li>
+   </ul>
+   <p><em>This is a suggested organization of your learning history, not a claim that every subject was mastered in that exact year.</em></p>
+
+   <h4>2. Tools and technologies I have used</h4>
+   <p><strong>Code editors and development environments</strong></p>
+   <p>Visual Studio Code</p>
+   <p>Main coding environment</p>
+   <p><strong>PowerShell</strong></p>
+   <p>Windows terminal and commands</p>
+   <p><strong>Version control and collaboration</strong></p>
+   <p>Git</p>
+   <p>GitHub</p>
+   <p><strong>Backend and database ecosystem</strong></p>
+   <p>Node.js</p>
+   <p>Express.js</p>
+   <p>PostgreSQL</p>
+   <p>Prisma ORM</p>
+   <p><strong>Frontend and application development</strong></p>
+   <p>React</p>
+   <p>Vite</p>
+   <p><strong>AI development tools</strong></p>
+   <ul>
+    <li>ChatGPT</li>
+    <li>OpenCode</li>
+    <li>Hermes</li>
+    <li>Ollama (exploration)</li>
+    <li>NVIDIA NIM (provider integration exploration)</li>
+   </ul>
+   <p><strong>Testing and API tools</strong></p>
+   <ul>
+    <li>Playwright</li>
+    <li>pytest</li>
+    <li>Postman</li>
+    <li>OpenAPI / Swagger</li>
+   </ul>
+   <p><strong>Package management and deployment</strong></p>
+   <ul>
+    <li>npm</li>
+    <li>pnpm</li>
+    <li>Turborepo</li>
+    <li>Render</li>
+    <li>Neon</li>
+   </ul>
+
+   <h3>Tools & Technologies</h3>
+   <p>I use a range of modern development tools and technologies throughout my software engineering journey, from writing code and managing projects to building applications, testing APIs, working with databases, and exploring AI-powered development.</p>
+   <p><strong>Development Environments:</strong> Visual Studio Code, Windows Terminal, PowerShell.</p>
+   <p><strong>Version Control:</strong> Git, GitHub.</p>
+   <p><strong>Programming & Runtime Tools:</strong> Python, Node.js, npm, pnpm.</p>
+   <p><strong>Frontend & Build Tools:</strong> React, Vite, Turborepo.</p>
+   <p><strong>Backend & Database Tools:</strong> Express.js, FastAPI, PostgreSQL, Prisma ORM, SQLite, Neon.</p>
+   <p><strong>API Development & Testing:</strong> Postman, OpenAPI, Swagger, Playwright, pytest.</p>
+   <p><strong>AI Development Tools:</strong> ChatGPT, OpenCode, Hermes Agent, DeepSeek DSH, NVIDIA NIM.</p>
+   <p><strong>Deployment & Multimedia Tools:</strong> Render, FFmpeg.</p>
+
   </section>
 
-  <section id="projects">
-   <h2>Projects</h2>
-   <h3>AI Business Content Generator <em>(in progress)</em></h3>
-   <p>A full-stack AI tool that generates marketing content, blog posts, and social media copy automatically using the OpenAI API.</p>
-   <h3>Task Manager API <em>(completed)</em></h3>
-   <p>A secure Node.js/Express REST API for task management with PostgreSQL, input validation, and an automated test suite.</p>
-   <h3>Hotel Manager (Casa Lume PMS) <em>(in progress)</em></h3>
-   <p>A hotel property management system foundation for guests, rooms, and reservations, built with a React client and an Express/Prisma backend.</p>
-   <h3>SkillSwap Board API <em>(completed)</em></h3>
-   <p>A Node.js/Express REST API for a public skill-offer/request board, with filtering, pagination, and a normalised PostgreSQL schema.</p>
-   <table style="border-collapse: collapse; width: 100%; margin: 20px 0; border: 1px solid #dee2e6;">
-    <caption>Projects Summary</caption>
-    <thead>
-     <tr>
-      <th style="border: 1px solid #dee2e6; padding: 8px; text-align: left;">Project</th>
-      <th style="border: 1px solid #dee2e6; padding: 8px; text-align: left;">Description</th>
-      <th style="border: 1px solid #dee2e6; padding: 8px; text-align: left;">Tech Stack</th>
-     </tr>
-    </thead>
-    <tbody>
-     <tr>
-      <td style="border: 1px solid #dee2e6; padding: 8px; text-align: left;">AI Business Content Generator</td>
-      <td style="border: 1px solid #dee2e6; padding: 8px; text-align: left;">AI tool that generates marketing content, blog posts, and social media copy automatically</td>
-      <td style="border: 1px solid #dee2e6; padding: 8px; text-align: left;">React, Express, Prisma, PostgreSQL, OpenAI API</td>
-     </tr>
-     <tr>
-      <td style="border: 1px solid #dee2e6; padding: 8px; text-align: left;">Task Manager API</td>
-      <td style="border: 1px solid #dee2e6; padding: 8px; text-align: left;">Node.js/Express REST API for task management with Prisma ORM and PostgreSQL</td>
-      <td style="border: 1px solid #dee2e6; padding: 8px; text-align: left;">Node.js, Express, Prisma, PostgreSQL</td>
-     </tr>
-     <tr>
-      <td style="border: 1px solid #dee2e6; padding: 8px; text-align: left;">Hotel Manager (Casa Lume PMS)</td>
-      <td style="border: 1px solid #dee2e6; padding: 8px; text-align: left;">Hotel property management system for guests, rooms, and reservations</td>
-      <td style="border: 1px solid #dee2e6; padding: 8px; text-align: left;">React, Express, Prisma, PostgreSQL</td>
-     </tr>
-     <tr>
-      <td style="border: 1px solid #dee2e6; padding: 8px; text-align: left;">SkillSwap Board API</td>
-      <td style="border: 1px solid #dee2e6; padding: 8px; text-align: left;">Skill-offer/request board with filtering, pagination, and a normalised schema</td>
-      <td style="border: 1px solid #dee2e6; padding: 8px; text-align: left;">Node.js, Express, Prisma, PostgreSQL</td>
-     </tr>
-    </tbody>
-    <tfoot>
-     <tr>
-      <td colspan="3" style="border: 1px solid #dee2e6; padding: 8px; text-align: left;">Featured projects: 4 (see the full projects page for all 16)</td>
-     </tr>
-    </tfoot>
-   </table>
-   <p><a href="projects.html">all my project</a></p>
-   <article>
-    <h3>Movie Watchlist API <em>(completed)</em></h3>
-    <p>A REST API for a movie watchlist, showing routing, middleware, and database access.</p>
-    <video width="480" controls poster="images/project-demo-poster.jpg">
-     <source src="media/project-demo.mp4" type="video/mp4">
-     <source src="media/project-demo.webm" type="video/webm">Your browser does not support the video tag.
-     <track kind="captions" src="media/project-demo.vtt" label="English">
-    </video>
-   </article>
-   <p><a href="projects.html">View All Projects</a></p>
-  </section>
+   <canvas id="skills-chart" width="800" height="260" style="display: block; margin: 20px auto;">
+    <script>
+     const skillsChartCanvas = document.getElementById('skills-chart');
+     const skillsCtx = skillsChartCanvas.getContext('2d');
+     const skillsChartFallback = document.createElement('p');
+     skillsChartFallback.textContent = 'Skills bar chart requires canvas support.';
+     if (!skillsCtx) {
+      document.body.insertBefore(skillsChartFallback, skillsChartCanvas.nextSibling);
+     }
+     const barWidth = 70;
+     const barSpacing = 18;
+     const maxHeight = 140;
+     const baselineY = 200;
+     const values = [
+     { label: 'HTML', value: 0.9, color: '#e34f26' },
+     { label: 'CSS', value: 0.85, color: '#2a6ebd' },
+     { label: 'JavaScript', value: 0.8, color: '#fce200' },
+     { label: 'Python', value: 0.75, color: '#3572a5' },
+     { label: 'React.js', value: 0.7, color: '#61dafb' },
+     { label: 'Node.js', value: 0.7, color: '#339933' },
+     { label: 'PostgreSQL', value: 0.65, color: '#316192' },
+     { label: 'TypeScript', value: 0.6, color: '#3178c6' }
+    ];
+     values.forEach((item, i) => {
+      const x = 20 + i * (barWidth + barSpacing);
+      const barHeight = item.value * maxHeight;
+      skillsCtx.fillStyle = item.color;
+      skillsCtx.fillRect(x, baselineY - barHeight, barWidth, barHeight);
+      skillsCtx.fillStyle = 'black';
+      skillsCtx.font = 'bold 13px Arial';
+      skillsCtx.fillText(item.label, x + barWidth / 2 - skillsCtx.measureText(item.label).width / 2, baselineY + 20);
+      skillsCtx.fillText(`${Math.round(item.value * 100)}%`, x + barWidth / 2 - 10, baselineY - barHeight - 10);
+     });
+    </script>
+    <p>Skills bar chart requires canvas support.</p>
+   </canvas>
 
-  <section id="education">
-   <h2>Education</h2>
-   <h3>BSc in Software Engineering</h3>
-   <p>Addis Ababa Science and Technology University, 2023 – present</p>
+   <section id="projects">
+    <h2>Projects</h2>
+
+    <article>
+     <h3>AI Business Content Generator <em>(in progress)</em></h3>
+     <p>A full-stack AI tool that generates marketing content, blog posts, and social media copy automatically using the OpenAI API.</p>
+     <p><a href="https://github.com/elyasdemamu644-dev/ai-business-content-generator">GitHub Repository</a></p>
+    </article>
+
+    <article>
+     <h3>Task Manager API <em>(completed)</em></h3>
+     <p>A secure Node.js/Express REST API for task management with PostgreSQL, input validation, and an automated test suite.</p>
+     <p><a href="https://github.com/elyasdemamu644-dev/task-manager-api">GitHub Repository</a></p>
+    </article>
+
+    <article>
+     <h3>Hotel Manager (Casa Lume PMS) <em>(in progress)</em></h3>
+     <p>A hotel property management system foundation for guests, rooms, and reservations, built with a React client and an Express/Prisma backend.</p>
+     <p><a href="https://github.com/elyasdemamu644-dev/hotel-manager">GitHub Repository</a></p>
+    </article>
+
+    <article>
+     <h3>SkillSwap Board API <em>(completed)</em></h3>
+     <p>A Node.js/Express REST API for a public skill-offer/request board, with filtering, pagination, and a normalised PostgreSQL schema.</p>
+     <p><a href="https://github.com/elyasdemamu644-dev/Skillswap-board-api">GitHub Repository</a></p>
+    </article>
+
+    <article>
+     <h3>Movie Watchlist API <em>(completed)</em></h3>
+     <p>A REST API for a movie watchlist, showing routing, middleware, and database access.</p>
+     <video width="480" controls poster="images/project-demo-poster.jpg">
+      <source src="media/project-demo.mp4" type="video/mp4">
+      <source src="media/project-demo.webm" type="video/webm">Your browser does not support the video tag.
+     </video>
+     </article>
+    <p><a href="projects.html">View All Projects</a></p>
+   </section>
+
+   <section id="education">
+    <h2>Education</h2>
+    <h3>BSc in Software Engineering</h3>
+    <p>Addis Ababa Science and Technology University, 2023 – present</p>
     <p><em>Focused on Software Engineering principles, full-stack development, and practical project experience.</em></p>
     <progress value="75" max="100" title="Degree progress">75% complete</progress>
     <p><em>Illustrative estimate based on third year of a four-year program.</em></p>
-   <h2>Academic Record</h2>
-   <table border="1" cellpadding="6" cellspacing="0">
-    <caption>Academic Record</caption>
-    <thead>
-     <tr>
-      <th>Course</th>
-      <th>Grade</th>
-      <th>Year</th>
-     </tr>
-    </thead>
-    <tbody>
-     <tr>
-      <td>Database Systems</td>
-      <td>A</td>
-      <td>2026</td>
-     </tr>
-     <tr>
-      <td>Computer Networks</td>
-      <td>B+</td>
-      <td>2026</td>
-     </tr>
-     <tr>
-      <td>Data Structures</td>
-      <td>A-</td>
-      <td>2026</td>
-     </tr>
-     <tr>
-      <td>Web Development</td>
-      <td>B</td>
-      <td>2026</td>
-     </tr>
-     <tr>
-      <td>Software Engineering</td>
-      <td>A</td>
-      <td>2026</td>
-     </tr>
-     <tr>
-      <td>Mathematics</td>
-      <td>B-</td>
-      <td>2026</td>
-     </tr>
-    </tbody>
-    <tfoot>
-     <tr>
-      <td colspan="2">Total Courses: 6</td>
-      <td>GPA: 3.50</td>
-     </tr>
-    </tfoot>
-   </table>
-  </section>
+    <h2>Academic Record</h2>
+    <table border="1" cellpadding="6" cellspacing="0">
+     <caption>Academic Record</caption>
+     <thead>
+      <tr>
+       <th>Course</th>
+       <th>Grade</th>
+       <th>Year</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>Database Systems</td>
+       <td>A</td>
+       <td>2026</td>
+      </tr>
+      <tr>
+       <td>Computer Networks</td>
+       <td>B+</td>
+       <td>2026</td>
+      </tr>
+      <tr>
+       <td>Data Structures</td>
+       <td>A-</td>
+       <td>2026</td>
+      </tr>
+      <tr>
+       <td>Web Development</td>
+       <td>B</td>
+       <td>2026</td>
+      </tr>
+      <tr>
+       <td>Software Engineering</td>
+       <td>A</td>
+       <td>2026</td>
+      </tr>
+      <tr>
+       <td>Mathematics</td>
+       <td>B-</td>
+       <td>2026</td>
+      </tr>
+     </tbody>
+     <tfoot>
+      <tr>
+       <td colspan="2">Total Courses: 6</td>
+       <td>GPA: 3.50</td>
+      </tr>
+     </tfoot>
+    </table>
+   </section>
+   <!-- Contact Me links -->
+   <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Thank you for visiting my portfolio! I am always happy to connect with fellow students, developers, and professionals. If you have any questions, project ideas, collaboration opportunities, or internship opportunities, feel free to reach out to me.</p>
+    <p>You can connect with me through GitHub and LinkedIn, explore my projects and work, or contact me directly by email. You can also view or download my CV to learn more about my education, skills, and experience.</p>
+    <p>I look forward to hearing from you!</p>
+    <p>Email: <a href="mailto:elyasdemamu644@gmail.com">elyasdemamu644@gmail.com</a></p>
+    <p>Phone: +251934928360</p>
+    <p>GitHub: <a href="https://github.com/elyasdemamu644-dev">https://github.com/elyasdemamu644-dev</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/elyas-demamu-0974b538a/">https://www.linkedin.com/in/elyas-demamu-0974b538a/</a></p>
+    <a href="files/cv.pdf">Download CV</a>
+    <div style="border:3px solid #333;padding:20px;text-align:center;margin:20px 0;border-radius:8px;background:#f9f9f9;">
+     <p><strong>Connect with me</strong></p>
+     <a href="https://github.com/elyasdemamu644-dev" class="connect-btn btn-github" target="_blank" style="background:#24292e;color:white;padding:15px 25px;border-radius:6px;font-weight:bold;text-decoration:none;display:inline-block;margin:5px;">GitHub</a>
+     <a href="https://www.linkedin.com/in/elyas-demamu-0974b538a/" class="connect-btn btn-linkedin" target="_blank" style="background:#0077b5;color:white;padding:15px 25px;border-radius:6px;font-weight:bold;text-decoration:none;display:inline-block;margin:5px;">LinkedIn</a>
+     <a href="mailto:elyasdemamu644@gmail.com" class="connect-btn btn-email" style="background:#d44638;color:white;padding:15px 25px;border-radius:6px;font-weight:bold;text-decoration:none;display:inline-block;margin:5px;">Email</a>
+    </div>
+   <!-- Find My University -->
+   <section id="university-location">
+    <h2>Find My University</h2>
+    <p>
+     Addis Ababa Science and Technology University (AASTU)
+     is located in Kilinto, Akaki-Kality, Addis Ababa, Ethiopia.
+    </p>
 
-  <section id="contact">
-   <h2>Contact Me</h2>
-   <p>Thank you for visiting my portfolio! I am always happy to connect with fellow students, developers, and professionals. If you have any questions, project ideas, collaboration opportunities, or internship opportunities, feel free to reach out to me.</p>
-   <p>You can connect with me through GitHub and LinkedIn, explore my projects and work, or contact me directly by email. You can also view or download my CV to learn more about my education, skills, and experience.</p>
-   <p>I look forward to hearing from you!</p>
-   <p>Email: <a href="mailto:elyasdemamu644@gmail.com">elyasdemamu644@gmail.com</a></p>
-   <p>Phone: +251934928360</p>
-   <p>GitHub: <a href="https://github.com/elyasdemamu644-dev">https://github.com/elyasdemamu644-dev</a></p>
-   <p>LinkedIn: <a href="https://www.linkedin.com/in/elyas-demamu-0974b538a/">https://www.linkedin.com/in/elyas-demamu-0974b538a/</a></p>
-   <a href="files/cv.pdf">Download CV</a>
-   <div style="border:3px solid #333;padding:20px;text-align:center;margin:20px 0;border-radius:8px;background:#f9f9f9;">
-    <p><strong>Connect with me</strong></p>
-    <a href="https://github.com/elyasdemamu644-dev" class="connect-btn btn-github" target="_blank" style="background:#24292e;color:white;padding:15px 25px;border-radius:6px;font-weight:bold;text-decoration:none;display:inline-block;margin:5px;">GitHub</a>
-    <a href="https://www.linkedin.com/in/elyas-demamu-0974b538a/" class="connect-btn btn-linkedin" target="_blank" style="background:#0077b5;color:white;padding:15px 25px;border-radius:6px;font-weight:bold;text-decoration:none;display:inline-block;margin:5px;">LinkedIn</a>
-    <a href="mailto:elyasdemamu644@gmail.com" class="connect-btn btn-email" style="background:#d44638;color:white;padding:15px 25px;border-radius:6px;font-weight:bold;text-decoration:none;display:inline-block;margin:5px;">Email</a>
-   </div>
+    <iframe
+     src="https://www.google.com/maps?q=Addis+Ababa+Science+and+Technology+University+Kilinto&output=embed"
+     title="Map showing Addis Ababa Science and Technology University in Kilinto, Addis Ababa"
+     width="100%"
+     height="400"
+     style="border:0;"
+     loading="lazy"
+     allowfullscreen>
+    </iframe>
+   </section>
 
    <!-- Send Me a Message -->
    <form action="thank-you.html" method="post" enctype="multipart/form-data">
@@ -282,7 +545,7 @@
      <label for="colour">Preferred website colour:</label>
      <input type="color" id="colour" name="colour" value="#1f5fa8">
      <br><br>
-     <label for="rating">How much do you like my portfolio? (1-10)</label>
+     <label for="rating">How much do you like my portfolio? (1�10)</label>
      <input type="range" id="rating" name="rating" min="1" max="10" value="7">
      <br><br>
     </fieldset>
@@ -301,7 +564,7 @@
        <option value="tutoring">Tutoring</option>
       </optgroup>
        <option value="other">Other</option>
-     </select>
+      </select>
      <br><br>
      <label for="message">Message:</label><br>
      <textarea id="message" name="message" rows="3" cols="40" required></textarea>
@@ -312,20 +575,21 @@
      <input type="submit" value="Send Message">
      <input type="reset" value="Clear">
     </fieldset>
-   </form>
+</form>
   </section>
-</main>
+ </main>
 
- <footer>
-  <p>&copy; 2026 Elyas Demamu. All rights reserved.</p>
-  <time datetime="2026-11-05">Last updated: November 5, 2026</time>
- </footer>
 
 <dialog id="hire-dialog">
   <p>I am currently available for new projects and collaborations. <a href="#contact">Contact me</a> to discuss how we can work together.</p>
   <p><a href="files/cv.pdf">Download my CV</a></p>
   <button>Close</button>
  </dialog>
+
+ <footer>
+  <p>&copy; 2026 Elyas Demamu. All rights reserved.</p>
+  <time datetime="2026-11-05">Last updated: November 5, 2026</time>
+ </footer>
 
  <script>
   (function() {
