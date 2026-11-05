@@ -25,6 +25,8 @@
   </nav>
 </header>
 
+<button id="hire-btn" style="margin: 20px 0; padding: 15px 25px; background: #000000; color: white; border: none; border-radius: 6; font-weight: bold;">Hire Me</button>
+
 <main>
   <section id="about">
    <h2>About Me</h2>
@@ -58,9 +60,19 @@
     </iframe>
    </section>
 
-  <section id="skills">
-   <h2>Skills</h2>
-   <ul>
+   <section id="skills">
+    <h2>Skills</h2>
+    <p><strong>Core Skill Levels:</strong></p>
+    <p><span style="display:inline-block;width:120px;">HTML</span> <meter value="0.9" min="0" max="1">90%</meter></p>
+    <p><span style="display:inline-block;width:120px;">CSS</span> <meter value="0.85" min="0" max="1">85%</meter></p>
+    <p><span style="display:inline-block;width:120px;">JavaScript</span> <meter value="0.8" min="0" max="1">80%</meter></p>
+    <p><span style="display:inline-block;width:120px;">Python</span> <meter value="0.75" min="0" max="1">75%</meter></p>
+    <p><span style="display:inline-block;width:120px;">React.js</span> <meter value="0.7" min="0" max="1">70%</meter></p>
+    <p><span style="display:inline-block;width:120px;">Node.js</span> <meter value="0.7" min="0" max="1">70%</meter></p>
+    <p><span style="display:inline-block;width:120px;">PostgreSQL</span> <meter value="0.65" min="0" max="1">65%</meter></p>
+    <p><span style="display:inline-block;width:120px;">TypeScript</span> <meter value="0.6" min="0" max="1">60%</meter></p>
+    <p><em>Note: Meter values are illustrative estimates of proficiency level.</em></p>
+    <ul>
     <li>Programming Languages
      <ul>
       <li>Python</li>
@@ -164,7 +176,9 @@
    <h2>Education</h2>
    <h3>BSc in Software Engineering</h3>
    <p>Addis Ababa Science and Technology University, 2023 – present</p>
-   <p><em>Focused on Software Engineering principles, full-stack development, and practical project experience.</em></p>
+    <p><em>Focused on Software Engineering principles, full-stack development, and practical project experience.</em></p>
+    <progress value="75" max="100" title="Degree progress">75% complete</progress>
+    <p><em>Illustrative estimate based on third year of a four-year program.</em></p>
    <h2>Academic Record</h2>
    <table border="1" cellpadding="6" cellspacing="0">
     <caption>Academic Record</caption>
@@ -305,5 +319,30 @@
 <footer>
  <p>&copy; 2026 Elyas Demamu. All rights reserved.</p>
 </footer>
+
+<dialog id="hire-dialog">
+  <p>I am currently available for new projects and collaborations. <a href="#contact">Contact me</a> to discuss how we can work together.</p>
+  <p><a href="files/cv.pdf">Download my CV</a></p>
+  <button>Close</button>
+ </dialog>
+
+ <script>
+  (function() {
+   const hireBtn = document.getElementById('hire-btn');
+   const dialog = document.getElementById('hire-dialog');
+   if (hireBtn && dialog) {
+    hireBtn.addEventListener('click', function(e) {
+     e.preventDefault();
+     dialog.showModal();
+    });
+    dialog.querySelector('button').addEventListener('click', function() {
+     dialog.close();
+    });
+    dialog.addEventListener('keydown', function(e) {
+     if (e.key === 'Escape') dialog.close();
+    });
+   }
+  })();
+ </script>
 </body>
 </html>
